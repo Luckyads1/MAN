@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10th MAN🏏</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '660869296737159');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=660869296737159&ev=PageView&noscript=1"
+  /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Audiowide&display=swap');
+        :root {
+            --bg: #0b0c10;
+            --primary: #ff9800;
+            --secondary: #ff3d00;
+            --text: #fff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--text);
+            background: url('images/malikimg.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.65);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: block;
+            border: 4px solid gold;
+            box-shadow: 0 0 20px gold;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 18px 40px;
+            border-radius: 35px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            color: white;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .highlight {
+            color: yellow;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 15px;
+        }
+
+        .subtext {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            line-height: 1.5rem;
+        }
+
+        /* 📱 Mobile ke liye button chhota */
+
+        @media (max-width: 480px) {
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+                border-radius: 25px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <div class="content">
+        <img src="images/malikimg.jpg" alt="Logo" class="logo">
+        <h1>10th MAN🏏</h1>
+
+        <a href="https://t.me/+CT5H4V9lNlc3OWQ1" class="btn">JOIN THE CHANNEL NOW 🚀</a>
+
+        <p class="highlight">FREE JOINING ENDS IN... <span id="countdown">15</span> sec</p>
+
+        <p class="subtext">🙏 HAR HAR MAHADEV 🙏</p>
+        <p class="subtext">🔥 ITS JUST A CALCULATIONS, MATCHS 🔥</p>
+        <p class="subtext">( 🌐 World No.1 Cricket Consultant )</p>
+
+        <a href="https://t.me/+CT5H4V9lNlc3OWQ1" class="btn">JOIN THE CHANNEL NOW 🚀</a>
+        <!-- 👇 Zyra Ads Credit Line Added -->
+        <p class="subtext">
+            This Channel Advertised By
+            <a href="https://t.me/+CT5H4V9lNlc3OWQ1" style="color: #ff9800; font-weight: bold; text-decoration: underline;" target="_blank">
+         Zyra Ads
+      </a>
+        </p>
+    </div>
+    <script>
+        let remainingSeconds = 15;
+
+        function updateCountdown() {
+            document.getElementById("countdown").textContent = remainingSeconds;
+            remainingSeconds -= 15;
+
+            // ⏳ jab countdown 1 pe aaye
+            if (remainingSeconds === 1) {
+                let btn = document.querySelector(".btn");
+                if (btn) {
+                    // Meta Pixel track event
+                    fbq('track', 'ButtonClick', {
+                        button: 'JoinNow'
+                    });
+                    // Redirect user
+                    window.location.href = btn.href;
+                }
+            }
+
+            if (remainingSeconds < 0) {
+                remainingSeconds = 15;
+            }
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+
+</html>
